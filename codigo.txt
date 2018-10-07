@@ -1,0 +1,50 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <random>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+string tipo_tela, tipo_prenda;
+float precio_unidad, peso_kg;
+int cantidad, numero_pedido;
+
+int inicializar(){
+
+    cout << "Indique su pedido: " << endl;
+    cout << "Tipo de tela: ";
+    cin >> tipo_tela;
+    cout << "Tipo de prenda: ";
+    cin >> tipo_prenda;
+    cout << "Indique que desea pedir:  (con el numero)" << endl;
+    cout << "1. Cantidad" << endl;
+    cout << "2. Peso"<<endl;
+    cout << "3. Precio/unidad"<<endl;
+    cin >> numero_pedido;
+    return numero_pedido;
+}
+int calculo_de_tiempo(string producto, string tipo_tela, int pedido){
+    if (producto=="polo"){
+        if(tipo_tela=="jersey"){
+            cout << "Polo_jersey";
+        }
+        if(tipo_tela=="franela"){
+            cout << "Polo_franela";
+        }
+    }
+    if (producto=="camisas"){
+        if(tipo_tela=="jersey"){
+            cout <<"Camisa_jersey";
+        }
+    }
+}
+
+int main() {
+    float jersey[3]={cantidad_polo_jersey*0.2,100*0.5,300*0.05};
+    float pique[3]={100*0.3,100*0.5,200*0.07};
+    float franela[3]={100*0.5,200*1,300*0.1};
+    inicializar();
+    calculo_de_tiempo(tipo_prenda, tipo_tela, numero_pedido);
+        }
